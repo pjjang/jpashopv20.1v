@@ -20,6 +20,13 @@ public class ItemService {
         itemRepository.save(item);
     }
 
+//  영속상태 엔티티를 가져와서 변경감지로 변경하는 방법법
+//   @Transactional
+//    public void updateItem(Long itemId, Book bookParam) {
+//        Item findItem = itemRepository.findOne(itemId);
+//        findItem.set...(bookParam.get...
+//    }
+
     public List<Item> findItems() {
         return itemRepository.findAll();
     }
